@@ -4,7 +4,7 @@
 
 借助sphinx生成了一套pdf与html，其中html已托管至github，pdf则随本文件共同提交。
 
-项目地址：https://github.com/lemondante/Single_Sourceing_Theory
+项目地址：<https://github.com/lemondante/Single_Sourceing_Theory>
 
-网页地址：
+网页地址：<https://lemondante.github.io/Single_Sourceing_Theory/index.html>
 
