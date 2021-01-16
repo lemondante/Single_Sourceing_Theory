@@ -1,0 +1,254 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3. 什么是同源开发和内容可复用策略 &mdash; 同源开发与内容复用策略 1.5.0rc1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="4. 同源开发的发展历史" href="history.html" />
+    <link rel="prev" title="2. 关于技术写作" href="tfw.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> 同源开发与内容复用策略
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">1. 总览</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tfw.html">2. 关于技术写作</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. 什么是同源开发和内容可复用策略</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">3.1. 同一来源</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">3.2. 不同用途</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">3.3. 面向对象编程的遗产</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">4. 同源开发的发展历史</a></li>
+<li class="toctree-l1"><a class="reference internal" href="why.html">5. 同源开发的优势</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how.html">6. 如何进行同源开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="methodology.html">7. 同源开发方法论</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conclusion.html">8. 最后总结</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">9. 参考资料</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">同源开发与内容复用策略</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><span class="section-number">3. </span>什么是同源开发和内容可复用策略</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/what.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1><span class="section-number">3. </span>什么是同源开发和内容可复用策略<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>从这一章开始，我们将正式讲述同源开发和内容可复用策略。</p>
+<p>首先，什么是同源开发？字面意义上，它可以理解为“从同一个来源开发生成不同用途的文档”。它还有一种形象的表述方式：“一次写作，到处发表”。其本质就是对一次写作内容的多次复用。要注意的是，正如我们之前提到的，技术写作是一项工程，而同源开发并非这项工程中的一种技术，它是指导整个工程构建的<strong>方法论</strong>。这种指导思想应该在写作开始即被明确下来并得到执行。</p>
+<p>那么，为了进一步解释同源开发，定义“同一个来源”和“不同用途”是我们的首要任务。下文将借助一款虚构的<strong>投影仪</strong>作为示例产品，详细地阐述同源开发的具体含义。</p>
+<div class="section" id="id2">
+<h2><span class="section-number">3.1. </span>同一来源<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>事实上，同一来源可以指<strong>完全相同</strong>的文字内容，也可以指<strong>不完全相同</strong>的文字内容。</p>
+<p><strong>完全相同</strong>的文字内容非常容易理解。如果两份文档的文字内容是完全一致的，那显然其中有一份是冗余的。这一点毋庸置疑。</p>
+<p>那<strong>不完全相同</strong>的文字内容为什么也可以被认为是同一来源呢？考虑以下的例子：</p>
+<p>一个技术写作者在一家投影仪企业工作。企业生产的投影仪主要有两种型号，它们功能非常接近，只有灯泡亮度有所区别。如果对这两种型号的投影仪编写两本独立的技术文档（此处特指用户手册），这显然是一种浪费。对于这两种产品，他们除了亮度以外的功能是完全一致的，那显然我只需要书写一次不包含亮度相关内容即可。例如，对于“打开您的投影仪”这一主题，显然写作一次即可应用到两种产品上。而对于“校正投影仪的灯泡亮度”这一主题，可以单独书写两份不同的文档分别应用于两种产品。如果“校正投影仪的灯泡亮度”这一主题的工作量占了全部文档的5%，那显然我们的工作总量就从200%下降到了105%！</p>
+<p>不仅如此，显然在很多时候我们还有更好的方法。假设对于“校正投影仪的灯泡亮度”这一主题中，所有的操作步骤也都没有区别，唯一有区别的只有产品型号和其对应的亮度参数需要修改，例如一款是1000流明而另一款是2000流明。借助一些现代化的编写工具，我们甚至可以给予型号和亮度两个单独的变量来表示，编写工具可以根据发布的文档版本自动替换正确数据。因此，尽管这个主题下两种产品的文字内容并不完全一致，我们依然可以将其认为是同一来源。</p>
+</div>
+<div class="section" id="id3">
+<h2><span class="section-number">3.2. </span>不同用途<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>什么可以被称为是不同用途？如我们上面所述，对于不同型号的投影仪，书写不同技术文档显然是典型的不同用途。那对于同一种产品，是否还存在不同用途呢？</p>
+<p>答案是肯定的。考虑到产品的面向人群不同，即使是同一内容也需要作出相应的调整。例如，对于不同母语人群，技术文档显然最好能够被翻译为不同的语言。诚然不同语言的技术文档之间显然是完全不同的内容，但是对于写作者而言，他最初一定要写作一份以写作者母语作为主要语言的文档，而其他语言版本的技术文档可能是由其他的写作者独立书写，也可能是由最初版本翻译而来。考虑到现在的机器翻译能力以及非常强大，将一份文档翻译为多种语言已经可以借助人工智能翻译得非常不错，因此多语言也成为了一个非常常见的不同用途。</p>
+<p>此外，同一文档内容针对不同的职业人群，是否也可以有不同的表达方式呢？例如一份产品的文档，面向协作开发者的部分应该由浅入深、面面俱到；而面向使用者的文档，完全可以在原始的文档内容中作摘录，舍弃部分细节而保留简单的使用教程。而这完全可以在文档建构过程中就对不同的主题预先分配好不同的标签，再由编写工具自动化生成不同的文档。</p>
+</div>
+<div class="section" id="id4">
+<h2><span class="section-number">3.3. </span>面向对象编程的遗产<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>如果你对编程一无所知，不要被这个标题吓到。大多数技术作家都不是程序员，通常不需要对编程有任何了解。同样的，对于这篇文章，你也不需要任何的编程知识，本小节仅仅对同源开发与面向对象编程之间的联系作一点简单的介绍。</p>
+<p>那么，同源开发和面向对象编程什么有关系呢？</p>
+<p>事实上，程序员与技术作家一样，远在同源开发成为技术写作的流行概念之前就一直在对完全相同的问题作斗争。程序员需要重用代码，他们需要确保他们的代码是结构良好的，这样就很容易长期维护。这一点非常像技术写手需要重用内容，建立良好的结构。不同的是，程序员很早就发现了编程工作的难度，并为此制定了非常明确和既定的原则，这也逐渐延伸为软件工程这一学科的核心内容之一，模块化。这是面向对象编程带来的最有力的武器。</p>
+<p>同样的，可以简单地说，同源开发本质上就是技术文档写作领域的模块化思想。降低不同主题之间的耦合度，提高同一主题内部的聚合度，也是同源开发的核心思想之一。可以说，伴随产品的复杂度不断提升，同源开发完全有潜力成为技术文档写作领域的核心概念。下一章我将简单阐述同源开发的发展历史，给予读者一个简单的背景理解。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="history.html" class="btn btn-neutral float-right" title="4. 同源开发的发展历史" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tfw.html" class="btn btn-neutral float-left" title="2. 关于技术写作" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2021, 尤伟康
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
